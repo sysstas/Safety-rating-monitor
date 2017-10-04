@@ -1,0 +1,18 @@
+#navigation{
+	background-color: lightblue;
+}
+#main{
+background-color: pink;
+}
+#aside{
+background-color: orange;
+}
+#footer{
+background-color: grey;
+}
+#alignCenter{
+	text-align: center;
+}
+.block{
+	display: block;
+}
