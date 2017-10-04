@@ -38,11 +38,11 @@
 </head>
 <body ng-app="progressLinearDemo1" ng-cloak class="container">
  
-	<nav id="navigation" class="row">navigation</nav>
+	<nav  class="nav navbar-default">navigation</nav>
 
-	<main id="main" class="row">main part
+	<main id="main" class="row">
 	  <div ng-controller="AppCtrl as vm" layout="column" layout-margin class="col-sm-12" ng-cloak>
-	  	<h2 class="md-title">Rating</h2>
+	  	<h1>Rating</h2>
 		  <p>
 		    For Pidhorodnyanskij REM 
 		  </p>
@@ -51,7 +51,7 @@
 
 		</div>
 		<br>
-		<div class="col-sm-4"> 			
+		<div class="col-sm-4" id="yellow"> 			
 			<h2>Audits plan</h2>		
 			<table class="table">
 				<thead>
@@ -103,7 +103,7 @@
 				<tr></tr>
 			</td>
 		</div>
-		<div class="col-sm-4">
+		<div class="col-sm-4" id="purple">
 			<h2>Novator plan</h2>
 			<table class="table">
 				<thead>
@@ -120,14 +120,23 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="col-sm-4">
-			<p>OD/OS</p> 
-			<ul>
-				<li>14 <a href="#" class="btn btn-success">+</a></li>				
-			</ul>
+		<div class="col-sm-4" id="green">
+			<h2>OD/OS</h2> 
+			<table>
+				<thead>
+					<tr>
+						<th>OD/OS    <a href="#" class="btn btn-success">+</a></th>						
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>15</td>
+					</tr>
+				</tbody>
+			</table>			
 		</div>
 </main> 
-<footer id="footer" class="row">footer</footer>
+<footer id="footer" class="row">Developed by Stanislav Sysoiev 2017</footer>
 
 
 

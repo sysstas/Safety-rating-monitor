@@ -1,6 +1,4 @@
-#navigation{
-	background-color: lightblue;
-}
+
 #main{
 background-color: pink;
 }
@@ -15,4 +13,13 @@ background-color: grey;
 }
 .block{
 	display: block;
+}
+#green{
+ background-color: #70db70;
+}
+#purple{
+ background-color:  #ffb3ff;
+}
+#yellow{
+ background-color: #e6b800;
 }
