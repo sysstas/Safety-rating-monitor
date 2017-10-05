@@ -1,34 +1,4 @@
-<!-- < html>
-<html>
-<head>
-	<title>Res Rating</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-
-	<link rel="stylesheet" type="text/css" href="style.css">
-
-</head>
-
-<body >
-
-
-
-
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
-
-</body>
-</html> -->
-
-<!DOCTYPE html lang="en" >
+<!DOCTYPE html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Angular Material style sheet -->
@@ -40,8 +10,8 @@
  
 	<nav  class="nav navbar-default">navigation</nav>
 
-	<main id="main" class="row">
-	  <div ng-controller="AppCtrl as vm" layout="column" layout-margin class="col-sm-12" ng-cloak>
+	<main id="main" class="row" ng-controller="AppCtrl as vm">
+	  <div  layout="column" layout-margin class="col-sm-12" ng-cloak>
 	  	<h1>Rating</h2>
 		  <p>
 		    For Pidhorodnyanskij REM 
@@ -62,41 +32,11 @@
 					</tr>
 				</thead>
 				<tbody>			
-					<tr>
-						<td>Shulyatskiy</td>
-						<td>1</td>
+					<tr ng-repeat="auditor in auditors">
+						<td>{{auditor.name}}</td>
+						<td>{{auditor.amount}}</td>
 						<td><a href="#" class="btn btn-success">+</a></td>
-					</tr>
-					<tr>
-						<td>Yazykovskij</td>
-						<td>1</td>
-						<td><a href="#" class="btn btn-success">+</a></td>
-					</tr>
-					<tr>
-						<td>Melnikov</td>
-						<td>1</td>
-						<td><a href="#" class="btn btn-success">+</a></td>
-					</tr>
-					<tr>
-						<td>Starokon</td>
-						<td>1</td>
-						<td><a href="#" class="btn btn-success">+</a></td>
-					</tr>
-					<tr>
-						<td>Olijnyk</td>
-						<td>1</td>
-						<td><a href="#" class="btn btn-success">+</a></td>
-					</tr>
-					<tr>
-						<td>Karmanovska</td>
-						<td>1</td>
-						<td><a href="#" class="btn btn-success">+</a></td>
-					</tr>
-					<tr>
-						<td>Taran</td>
-						<td>1</td>
-						<td><a href="#" class="btn btn-success">+</a></td>
-					</tr>
+					</tr>					
 				</tbody>
 			</table>
 			<td>

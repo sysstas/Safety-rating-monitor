@@ -7,17 +7,18 @@
   .config(function($mdThemingProvider) {
   })
   .controller('AppCtrl', ['$scope', '$interval', function($scope, $interval) {
-    var self = this, j= 0, counter = 0;
+    var self = this;
 
-    self.mode = 'query';
-    self.activated = true;
-    self.determinateValue = 30;
-   
+    self.determinateValue = 30; 
 
-    self.showList = [ ];
+    $scope.auditors = [{name:"Shulyatskiy", amount:0}, {name:"Yazykovskij",amount:0},{name:"Melnikov",amount:0},{name:"Starokon",amount:0},{name:"Olijnyk",amount:0},{name:"Karmanovska",amount:0},{name:"Taran",amount:0}];
 
-    /**
-     * Turn off or on the 5 themed loaders
-     */
-   
+
+    $scope.shul = 10;  
+    $scope.increment = function(arg){
+      console.log(arg);
+      arg++; 
+      return;  
+    }
+
   }]);
