@@ -4,7 +4,7 @@
   <!-- Angular Material style sheet -->
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body ng-app="progressLinearDemo1" ng-cloak class="container">
  
@@ -12,7 +12,7 @@
 
 	<main id="main" class="row" ng-controller="AppCtrl as vm">
 	  <div  layout="column" layout-margin class="col-sm-12" ng-cloak>
-	  	<h1>Rating</h2>
+	  	<h1>Rating</h1>
 		  <p>
 		    For Pidhorodnyanskij REM 
 		  </p>
@@ -35,27 +35,25 @@
 					<tr ng-repeat="auditor in auditors">
 						<td>{{auditor.name}}</td>
 						<td>{{auditor.amount}}</td>
-						<td><a href="#" class="btn btn-success">+</a></td>
+						<td><a href="#" class="btn btn-success" ng-click="increment(auditor)">+</a></td>
 					</tr>					
 				</tbody>
 			</table>
-			<td>
-				<tr></tr>
-			</td>
+			
 		</div>
 		<div class="col-sm-4" id="purple">
 			<h2>Novator plan</h2>
 			<table class="table">
 				<thead>
 					<tr>
-						<th>KNS  <a href="#" class="btn btn-success">+</a></th>
-						<th>SUIS  <a href="#" class="btn btn-success">+</a></th>
+						<th>KNS  <a href="#" class="btn btn-success" ng-click="increment(novator.knsAmount)">+</a></th>
+						<th>SUIS  <a href="#" class="btn btn-success" ng-click="increment(novator.suisAmount)">+</a></th>
 					</tr>
 				</thead>			
 				<tbody>
 					<tr>
-						<td>1</td>
-						<td>1</td>						
+						<td>{{novator.knsAmount.amount}}</td>
+						<td>{{novator.suisAmount.amount}}</td>						
 					</tr>
 				</tbody>
 			</table>
@@ -65,12 +63,12 @@
 			<table>
 				<thead>
 					<tr>
-						<th>OD/OS    <a href="#" class="btn btn-success">+</a></th>						
+						<th>OD/OS    <a href="#" class="btn btn-success" ng-click="increment(odos)">+</a></th>						
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>15</td>
+						<td>{{odos.amount}}</td>
 					</tr>
 				</tbody>
 			</table>			
