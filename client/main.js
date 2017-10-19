@@ -15,6 +15,7 @@
     $scope.increment = function(arg){
       console.log(arg + " before");
       arg.amount++; 
+		
     }
 
   }]);

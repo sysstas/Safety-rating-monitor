@@ -1,0 +1,23 @@
+{
+  "name": "ratingcounter",
+  "version": "1.0.0",
+  "description": "Helps to count rating of HnS",
+  "main": "server/app.js",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sysstas/Safety-rating-monitor.git"
+  },
+  "author": "Stanislav Sysoiev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sysstas/Safety-rating-monitor/issues"
+  },
+  "homepage": "https://github.com/sysstas/Safety-rating-monitor#readme"
+}
