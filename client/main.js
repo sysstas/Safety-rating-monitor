@@ -4,12 +4,26 @@
   })
   .controller('AppCtrl', ['$scope', '$interval', function($scope, $interval) {
     var self = this;
-	let percentage = {};
-	 percentage.audits = 0;
-	 percentage.novator = 0;
-	 percentage.odos = 0;
+	let percentage = {
+		percentage.audits = 0;
+		percentage.novator = 0;
+	 	percentage.odos = 0;
+	};
+	let points = {
+		points.audits = 0;
+	 	points.novator = 0;
+		point.odos = 0;
+	};
+	 
+	 
+		self.determinateValue = 0; 
+		self.points = 30;
+		self.place = 0;
+	// this function updates rating scale
 	function update(){
 		self.determinateValue = percentage.audits + percentage.novator + percentage.odos; 
+		
+		self.place = 4;
 	};
     update();
 
@@ -19,10 +33,22 @@
 
     $scope.shul = 10;  
     $scope.increment = function(arg){
-      console.log(arg + " before");
-      arg.amount++; 
-		percentage.audits++;
-		update();
-    }
-
+	  let pass = 111;
+	  if (prompt("password")==111){
+	  	console.log(arg + " before");
+      	arg.amount++;
+		//Chechking if max of audits amount being reached
+		const maxAudits = 48;
+		if (percentage.audits<maxAudits)
+			{ percentage.audits++;
+			update() }
+			else update();
+    	}
+	  	else alert("wrong password!");
+	};
+	  // function controls pointsamount of audits
+      function auditsPoints(arg){
+	  	if (arg<28) self.poi
+	  };
+	
   }]);
